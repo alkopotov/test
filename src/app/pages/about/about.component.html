@@ -1,0 +1,9 @@
+<mat-list role="list">
+  <div mat-subheader> Users </div>
+  @for (item of usersService.users; track item.id) {
+    <mat-list-item role="listitem" [routerLink]="['/about', item.id]">
+      <mat-icon matListItemIcon>person</mat-icon>
+      <div matListItemTitle>{{item.name}}</div>
+    </mat-list-item>
+  }
+</mat-list>
